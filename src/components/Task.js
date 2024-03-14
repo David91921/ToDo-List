@@ -1,14 +1,15 @@
 import React from "react";
 import '../style-sheet/Task.css';
+import { AiTwotoneDelete } from "react-icons/ai";
 
-function Tarea ({ texto }) {
+function Tarea ({ texto, completada }) {
   return(
-    <div className="container-task">
+    <div className={completada ? 'task-container completed' : 'task-container'}>
       <div className="text-task">
         {texto}
       </div>
-      <div className="icon-task">
-        Eliminar
+      <div className="container-icons-task">
+        <AiTwotoneDelete className="icon-task"/>
       </div>
     </div>
   );
