@@ -19,7 +19,7 @@ function TaskForm (props){
       completada: false
     }
 
-    console.log(newTask);
+    props.onSubmit(newTask);
   }
 
   return (
